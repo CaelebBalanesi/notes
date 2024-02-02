@@ -1,0 +1,22 @@
+[package]
+name = "note"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "note-cli"
+src = "src/note-cli.rs"
+
+[[bin]]
+name = "note-server"
+src = "src/main.rs"
+
+[dependencies]
+tokio = { version = "1.35.1", features = ["full"] }
+axum = "0.7.4"
+serde = { version = "1.0.195", features = ["derive"] }
+serde_derive = "1.0.196"
+rusqlite = { version = "0.30.0", features = ["bundled"] }
+uuid = { version = "1.7.0", features = ["v4"]}
+reqwest = "0.11.23"
+toml_edit = "0.21.1"
